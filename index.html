@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Berat Badan Ideal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Bagian input -->
-        <div class="input-section">
-            <h2>Kalkulator BMII</h2>
-            <input type="number" id="weight" placeholder="Berat Badan (kg)">
-            <input type="number" id="height" placeholder="Tinggi Badan (cm)">
-            <button onclick="calculateBMI()">Hitung BMI</button>
-        </div>
+        <h1>Kalkulator Berat Badan Ideal</h1>
+        <form id="bmiForm">
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" required>
+                <option value="male">Pria</option>
+                <option value="female">Wanita</option>
+            </select>
 
-        <!-- Bagian output -->
-        <div class="output-section">
-            <div id="result">Hasil BMI akan tampil di sini</div>
-        </div>
+            <label for="age">Umur (tahun):</label>
+            <input type="number" id="age" required>
+
+            <label for="height">Tinggi Badan (cm):</label>
+            <input type="number" id="height" required>
+
+            <label for="weight">Berat Badan (kg):</label>
+            <input type="number" id="weight" required>
+
+            <button type="button" onclick="calculateBMI()">Hitung</button>
+        </form>
+        <p id="result"></p>
     </div>
-    <script src="28-oct-24-FarelN\JS\script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
