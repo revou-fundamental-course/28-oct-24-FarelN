@@ -1,6 +1,6 @@
 /* Reset default style CSS */
 * {
-  margin: 1px;
+  margin: 0px;
   padding: 0px;
   font-family: system-ui;
 }
